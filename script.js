@@ -457,3 +457,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 ///user name
+
+///user name
+document.addEventListener('DOMContentLoaded', () => {
+  const nameInput = document.getElementById('name-input');
+  const genderSelect = document.getElementById('gender-select');
+  const setNameBtn = document.getElementById('set-name-btn');
+  const userNameSpan = document.getElementById('user-name');
+  const userImage = document.getElementById('user-image');
+  const userForm = document.querySelector('.user-form');
+  const menuBtn = document.querySelector('.menu-btn');
+
+  // Retrieve user data from local storage
+  const getUserData = () => {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData) {
+      userNameSpan.textContent = userData.name;
+      userImage.src = userData.gender === 'male' ? 'images/boy.png' : userData.gender === 'female' ? 'images/girl.png' : 'images/default.png';
+    }
+  };
+
+  // Save user data to local storage
+  const saveUserData = (name, gender) => {
+    const userData = { name, gender };
+    localStorage.setItem('userData', JSON.stringify(userData));
+  };
+
+  setNameBtn.addEventListener('click', () => {
+    const userName = nameInput.value.trim();
+    const userGender = genderSelect.value;
+
+    if (userName) {
+      userNameSpan.textContent = userName;
+      userImage.src = userGender === 'male' ? 'images/boy.png' : userGender === 'female' ? 'images/girl.png' : 'images/default.png';
+      saveUserData(userName, userGender);
+      userForm.classList.remove('active');
+    }
+  });
+
+  menuBtn.addEventListener('click', () => {
+    userForm.classList.toggle('active');
+  });
+
+  // Initial data load
+  getUserData();
+});
+
+// 
+
