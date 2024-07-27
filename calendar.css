@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
 
 ::-webkit-scrollbar {
     width: 0;
@@ -16,198 +16,395 @@ body {
     align-items: center;
     justify-content: center;
     color: #2e2e2e;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #cde7ff;
 }
 
 .wrapper {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column; /* Changed from row to column */
 }
 
-@media (min-width: 768px) {
-    .wrapper {
-        height: 50rem;
-        width: 25rem;
-        border-radius: 40px;
-        border: 10px solid #2e2e2e;
-        background-color: #cde7ff;
-    }
-}
-
-.wrapper .screen {
-    min-width: 100%;
-    flex: 1;
-    transition: all 0.3s;
+@media (min-width:768px) {
+  .wrapper {
+      height: 50rem;
+      width: 25rem;
+      border-radius: 40px;
+      border: 10px solid #2e2e2e;
+  }
 }
 
 .screen-backdrop {
-    width: 135%;
-    height: 25rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0 0 50% 50%;
-    background-color: #39a6f0;
-    z-index: -1;
-    transition: all 0.3s;
+  width: 135%;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 50% 50%;
+  background-color: #39a6f0;
+  z-index: -1;
+  transition: all 0.3s;
 }
 
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    width: calc(100% - 20px);
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.top, .bottom {
+  margin-top: 10px;
+    flex: -5;
 }
-
-.header .nav-button,
-.header .back-button {
-    background: none;
-    border: none;
-    color: #2e2e2e;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.header .nav-button:hover,
-.header .back-button:hover {
-    color: #39a6f0;
-}
-
-.header .calendar-title {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.view-controls {
-    margin: 70px 0 10px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.view-button {
-    background-color: #39a6f0;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.view-button:hover {
-    background-color: #2e8bc0;
-}
-
-.calendar-backdrop {
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-}
-
-.calendar-backdrop {
-    background: url('path/to/your/image.jpg') no-repeat center center;
-    background-size: cover;
-}
-
 
 .calendar {
-    position: relative; /* Ensure the backdrop is positioned correctly */
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    overflow: hidden;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 5px; /* Adjust this to position the calendar properly */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f9f9f9d0; /* Light background color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Ensure no overflow outside rounded corners */
+  margin: 5px 10px; /* Top and bottom margin 25px, left and right margin 40px */
+  background-image: url('images/design.jpg'); /* Set your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  margin-top: 20px;
 }
 
-.calendar-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Example backdrop: light transparent black */
-    z-index: -1; /* Ensure the backdrop is behind the calendar content */
-    border-radius: 0 0 10px 10px; /* Match the calendar’s border radius */
+
+
+.month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 10px; /* Increased padding for better spacing */
+  background-color: #ffffff; /* White background for the month header */
+  border-bottom: 1px solid #ddd; /* Subtle bottom border */
 }
 
-.calendar-days-header {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    background-color: #f0f0f0;
-    font-weight: bold;
+.date {
+  font-weight: bold;
 }
 
-.calendar-days-header div {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 2px solid #ddd;
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1px;
+.weekdays div, .days div {
+  text-align: center;
+  padding: 3px; /* Increased padding */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-.calendar-day {
-    padding: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+.weekdays div {
+  font-weight: bold;
+  color: #0d0176; /* Darker color for weekday names */
 }
 
-.calendar-day:hover {
-    background-color: #39a6f0;
-    color: #fff;
+.day {
+  border: 1px solid transparent;
+  border-radius: 4px; /* Rounded corners for day cells */
 }
 
-.calendar-day.today {
-    background-color: #39a6f0;
-    color: #fff;
-    border-radius: 1rem;
-    font-weight: bold;
+.prev-date, .next-date {
+  color: #bbb;
 }
 
-.tasks {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
+.today {
+  background-color: #e0f7fa; /* Light cyan background for today's date */
+  border-radius: 1px; /* Rounded corners */
+}
+
+.active {
+  background-color: #039be5; /* Vibrant blue for active day */
+  color: #fff;
+  border-radius: 10rem;
+}
+
+.event {
+  background-color: #fff3e0; /* Light background for events */
+  border-left: 4px solid #ffab00; /* Colored left border for events */
+  padding: 8px; /* Padding inside event cells */
+  margin-bottom: 8px; /* Space between events */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.goto-today {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically center */
+  margin-top: 20px; /* Increased margin for better spacing */
+  padding: 15px; /* Increased padding for a more spacious feel */
+  background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Subtle gradient background */
+  border-radius: 12px; /* Rounded corners */
+  border: 1px solid #e0e0e0; /* Light border for definition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.goto-today:hover {
+  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* Inverted gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.goto-today button {
+  background-color: #039be5; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners for button */
+  padding: 3px 8px; /* Padding inside button */
+  cursor: pointer;
+  font-size: 1rem; /* Font size for button text */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.goto-today button:hover {
+  background-color: #0277bd; /* Darker button color on hover */
+}
+
+
+.add-event-wrapper {
+  display: none;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px; /* Increased padding for better spacing */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.add-event-wrapper.active {
+  display: flex;
+}
+
+.add-event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.add-event-input {
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.add-event-input input {
+  width: 100%;
+  padding: 10px; /* Increased padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-event-btn {
+  background-color: #039be5; /* Updated button color */
+  color: #fff;
+  padding: 12px; /* Increased padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.add-event-btn:hover {
+  background-color: #0277bd; /* Darker blue on hover */
+}
+
+.credits {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.credits a {
+  color: #039be5; /* Updated link color */
+  text-decoration: none;
+}
+
+.today-date {
+  padding: 10px; /* Increased padding */
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2px;
+  margin: 5px 10px; /* Top and bottom margin 25px, left and right margin 40px */
+}
+
+.today-date .event-day {
+  font-size: 1.8rem; /* Larger font size */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.today-date .event-date {
+  font-size: 1.4rem; /* Larger font size */
+  color: #555;
+}
+
+.events {
+  padding: 15px; /* Increased padding */
+}
+
+.goto-today {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.add-event-wrapper {
+    display: none;
+    flex-direction: column;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tasks h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #2e2e2e;
-}
-
-#task-list {
-    list-style: none;
-    padding: 0;
-}
-
-#task-list li {
-    background-color: #f0f0f0;
+    border-radius: 8px;
     padding: 10px;
-    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-event-wrapper.active {
+    display: flex;
+}
+
+.add-event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.add-event-input {
+    margin-bottom: 10px;
+}
+
+.add-event-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-event-btn {
+    background-color: #39a6f0;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-event-btn:hover {
+    background-color: #2d8cf0;
+}
+
+.credits {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.credits a {
+    color: #39a6f0;
+    text-decoration: none;
+}
+
+.today-date {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.today-date .event-day {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
     margin-bottom: 5px;
+}
+
+.today-date .event-date {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.events {
+    padding: 10px;
+}
+
+.event {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.event .title {
+    display: flex;
+    align-items: center;
+}
+
+.event .title i {
+    margin-right: 5px;
+}
+
+.no-event {
+    text-align: center;
+    padding: 20px;
+}
+
+.add-event {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #39a6f0;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-event i {
+    font-size: 1.5rem;
+}
+
+/*back Button*/
+.back-btn {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.back-btn svg {
+  width: 24px;
+  height: 24px;
+  color: #2e2e2e;
 }
