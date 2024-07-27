@@ -30,7 +30,7 @@ body {
 
 body.dark {
     --bg-color: #535c72;
-    color: rgb(241, 238, 35);
+    color: rgb(255, 157, 0);
 }
 
 .switch {

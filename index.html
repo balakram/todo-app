@@ -21,175 +21,316 @@
 </head>
 
 <body>
+  <!--============================================================-->
+  <!--<div class="container1">
+    <aside class="sidebar">
+      <ul class="menu one">
+        <li>
+          <a href="#">
+            <ion-icon name="home-outline"></ion-icon>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="person-outline"></ion-icon>
+            <span>Contact</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="mail-outline"></ion-icon>
+            <span>Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="settings-outline"></ion-icon>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+    </aside>
+
+  </div>
+      <-- IONICONS --
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>-->
+  <!--============================================================-->
+
   <div class="wrapper">
-    <div class="screen-backdrop"></div>
-    <div class="home-screen screen">
-      <div class="head-wrapper">
-        <div class="menu-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-          </svg>
-          <label class="switch" for="switch">
-            <input type="checkbox" id="switch" />
-            <div class="sunmoon">
-              <div class="darkside"></div>
-            </div>
-            <div class="border"></div>
-            <div class="clouds">
-              <img src="ModeSwitch/cloud_1.svg" alt="" class="cloud cloud-1" />
-              <img src="ModeSwitch/cloud_2.svg" alt="" class="cloud cloud-2" />
-              <img src="ModeSwitch/cloud_3.svg" alt="" class="cloud cloud-3" />
-              <img src="ModeSwitch/cloud_4.svg" alt="" class="cloud cloud-4" />
-              <img src="ModeSwitch/stars.svg" alt="" class="stars" />
-            </div>
-          </label>
-        </div>
-        <div class="welcome">
-          <div class="content">
-            <h1>Hello John</h1>
-            <p>Today you have <span id="total-tasks">5</span> tasks</p>
+    <!--<div class="main-screen">-->
+      <!-- Main content here -->
+      <div class="screen-backdrop"></div>
+      <div class="home-screen screen">
+        <div class="head-wrapper">
+          <div class="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+            </svg>
+            <label class="switch" for="switch">
+              <input type="checkbox" id="switch" />
+              <div class="sunmoon">
+                <div class="darkside"></div>
+              </div>
+              <div class="border"></div>
+              <div class="clouds">
+                <img src="ModeSwitch/cloud_1.svg" alt="" class="cloud cloud-1" />
+                <img src="ModeSwitch/cloud_2.svg" alt="" class="cloud cloud-2" />
+                <img src="ModeSwitch/cloud_3.svg" alt="" class="cloud cloud-3" />
+                <img src="ModeSwitch/cloud_4.svg" alt="" class="cloud cloud-4" />
+                <img src="ModeSwitch/stars.svg" alt="" class="stars" />
+              </div>
+            </label>
           </div>
-          <div class="img">
-            <div class="backdrop"></div>
-            <img src="images/boy.png" alt="" />
+
+          <div class="welcome">
+            <div class="content">
+              <h1>Hello <span id="profileName">User</span></h1>
+              <p>Today you have <span id="total-tasks">5</span> tasks</p>
+            </div>
+            <div class="img" id="profileDisplay">
+              <div class="backdrop"></div>
+              <img src="images/boy.png" alt="" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="nav-buttons">
-        <button class="nav-btn" id="dashboard-btn">Dashboard</button>
-        <button class="nav-btn" id="calendar-btn">Calendar</button>
-        <button class="nav-btn" id="profile-btn">Profile</button>
-      </div>
-      <!-- Home page Page catagotries -->
-      <div class="categories-wrapper">
-        <div class="categories">
-          <div class="category">
-            <div class="left">
-              <img src="images/boy.png" alt="sun" />
-              <div class="content">
-                <h1>Personal</h1>
-                <p>5 Tasks</p>
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+          <button class="nav-btn" onclick="location.href='#'">Dashboard</button>
+          <button class="calendar-btn nav-btn" onclick="location.href='calendar.html'">Calendar</button>
+          <button class="profile-btn nav-btn" onclick="location.href='profile.html'">Profile</button>
+          
+
+        </div>
+        <div class="categories-wrapper">
+          <div class="categories">
+            <div class="menu">
+              <div class="left">
+                <img src="images/boy.png" alt="sun" />
+                <div class="content">
+                  <h1>Personal</h1>
+                  <p>5 Tasks</p>
+                </div>
+              </div>
+              <div class="options">
+                <div class="toggle-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                  </svg>
+                </div>
               </div>
             </div>
-            <div class="options">
-              <div class="toggle-btn">
+          </div>
+        </div>
+      </div>
+      <div class="category-screen screen">
+        <div class="head-wrapper">
+          <div class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+            </svg>
+          </div>
+          <div class="options">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+          </div>
+        </div>
+        <div class="category-details">
+          <img src="images/boy.png" alt="" id="category-img" />
+          <div class="details">
+            <p id="num-tasks">8 tasks</p>
+            <h1 id="category-title">Personal</h1>
+          </div>
+        </div>
+        <div class="tasks-wrapper">
+          <div class="tasks">
+            <div class="task-wrapper">
+              <label for="task" class="task">
+                <input type="checkbox" name="task" id="task" />
+                <span class="checkmark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <p>Buy a new car lorem</p>
+              </label>
+              <div class="delete">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
                 </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- page Page catagotries -->
-    <div class="category-screen screen">
-      <div class="head-wrapper">
-        <div class="back-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-          </svg>
-        </div>
-        <div class="options">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
-          </svg>
-        </div>
-      </div>
-      <div class="category-details">
-        <img src="images/boy.png" alt="" id="category-img" />
-        <div class="details">
-          <p id="num-tasks"></p>
-          <h1 id="category-title">Personal</h1>
-          <div class="user-form">
-            <input type="text" id="name-input" placeholder="Enter your name" />
-            <select id="gender-select">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-            <button id="set-name-btn">Set Name</button>
+      <!----------------------------------------->
+      <div class="menu-screen screen">
+        <div class="head-wrapper">
+          <div class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+            </svg>
           </div>
-       
+          <div class="options">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+          </div>
         </div>
-      </div>
-      <div class="tasks-wrapper">
-        <div class="tasks">
-          <div class="task-wrapper">
-            <label for="task" class="task">
-              <input type="checkbox" name="task" id="task" />
-              <span class="checkmark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+        <div class="menu-details">
+          <img src="images/boy.png" alt="" id="category-img" />
+          <div class="details">
+            <p id="num-tasks">8 tasks</p>
+            <h1 id="menu-title">Personal</h1>
+          </div>
+        </div>
+        <div class="tasks-wrapper">
+          <div class="tasks">
+            <div class="task-wrapper">
+              <label for="task" class="task">
+                <input type="checkbox" name="task" id="task" />
+                <span class="checkmark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <p>Buy a new car lorem</p>
+              </label>
+              <div class="delete">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
                 </svg>
-              </span>
-              <p>Buy a new car lorem</p>
-            </label>
-            <div class="delete">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-              </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- New Profile Page -->
-    <div class="profile-screen screen">
-      <h1>Profile Page</h1>
-      <p>Here you can view and edit your profile details.</p>
-    </div>
+      <!---------------------------------------------->
+      <div class="profile-screen screen">
+        <div class="head-wrapper">
+          <svg class="back-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5l-7.5-7.5 7.5-7.5" />
+          </svg>
+          <h1>Profile</h1>
+        </div>
+        <div class="profile-details">
+          <img src="images/profile-picture.png" alt="Profile Picture">
+          <h2>John Doe</h2>
+          <p>Email: johndoe@example.com</p>
+          <p>Phone: +123456789</p>
+          <button class="edit-profile-btn">Edit Profile</button>
+        </div>
+      </div>
 
-    <!-- New Calendar Page -->
-    <div class="calendar-screen screen">
-      <h1>Calendar Page</h1>
-      <p>Here you can view and manage your calendar.</p>
+      <div class="calendar-screen screen">
+        <div class="head-wrapper">
+          <svg class="back-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5l-7.5-7.5 7.5-7.5" />
+          </svg>
+          <h1>Calendar</h1>
+        </div>
+        <div class="calendar-details">
+          <div id="calendar"></div>
+        </div>
+      </div>
+      <!---------------------------------------------->
+      <div class="add-task-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+      </div>
+      <div class="nav-task-btn">
+        <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </svg>-->
+      </div>
+      <div class="black-backdrop"></div>
+      <div class="add-task">
+        <div class="add-task-backdrop"></div>
+        <h1 class="heading">Add Task</h1>
+        <div class="input-group">
+          <label for="task-input"> Task </label>
+          <input type="text" id="task-input" required />
+        </div>
+        <div class="input-group">
+          <label for="menu-select"> menu </label>
+          <select id="menu-select"></select>
+        </div>
+        <div class="btns">
+          <button class="cancel-btn">Cancel</button>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
     </div>
-
-    <!-- New Settings Page -->
-    <div class="settings-screen screen">
-      <h1>Settings Page</h1>
-      <p>Here you can adjust your application settings.</p>
-    </div>
-<div class="add-task-btn">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-  </svg>
-</div>
-<div class="black-backdrop"></div>
-<div class="add-task">
-  <div class="add-task-backdrop"></div>
-  <h1 class="heading">Add Task</h1>
-  <div class="input-group">
-    <label for="task-input"> Task </label>
-    <input type="text" id="task-input" required />
-  </div>
-  <div class="input-group">
-    <label for="category-select"> Category </label>
-    <select id="category-select"></select>
-  </div>
-  <div class="input-group">
-    <label for="task-date"> Date </label>
-    <input type="date" id="task-date" required />
-  </div>
-  <div class="btns">
-    <button class="cancel-btn">Cancel</button>
-    <button class="add-btn">Add</button>
-  </div>
-</div>
-
-  </div>
-
   <script src="script.js"></script>
+  <script src="profile.js"></script>
   <script src="ModeSwitch/modeswitch.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.2/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.10.2/main.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.2/main.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.10.2/main.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+          {
+            title: 'Meeting',
+            start: '2024-07-01T10:30:00',
+            end: '2024-07-01T12:30:00'
+          },
+          {
+            title: 'Lunch',
+            start: '2024-07-03T12:00:00'
+          },
+          {
+            title: 'Conference',
+            start: '2024-07-07',
+            end: '2024-07-10'
+          }
+        ]
+      });
+
+      calendar.render();
+    });
+  </script>
+
+
 </body>
 
 </html>

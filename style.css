@@ -65,6 +65,13 @@ body {
     transform: translateX(-100%);
 }
 
+.wrapper.show-category .category-screen {
+    transform: translateX(-100%);
+}
+
+.wrapper .menu-screen {
+    transform: translateX(-100%);
+}
 .wrapper.show-category .screen-backdrop {
     transform: translate(-50%, -60%)
 }
@@ -122,6 +129,7 @@ body {
     overflow: auto;
 }
 
+
 .categories {
     padding-top: 1rem;
     display: flex;
@@ -138,7 +146,6 @@ body {
     justify-content: space-between;
     box-shadow: 0 10px 20px 5px #00000023;
     transition: all 0.3s;
-
 }
 
 .category:hover {
@@ -339,7 +346,7 @@ body {
     justify-content: center;
     background-color: #39a6f0;
     transition: all 0.3s;
-    margin-bottom: 5rem;
+    /*margin-bottom: 35px;*/
 }
 
 .add-task-btn:hover {
@@ -364,6 +371,7 @@ body {
     width: 100%;
     padding: 20px 30px;
     transition: all 0.3s;
+    
 }
 
 .add-task.active {
@@ -372,10 +380,7 @@ body {
 
 .add-task .heading {
     font-size: 1.5rem;
-    margin-bottom: 7rem;
-    color: #310449;   
-    font-weight: bold;
-    
+    margin-bottom: 1rem;
 }
 
 .input-group {
@@ -436,7 +441,7 @@ button.add-btn {
     left: 50%;
     transform: translateX(-50%);
     width: 135%;
-    height: 25rem;
+    height: 20rem;
     border-radius: 50% 50% 0 0;
     background-color: #fff;
 }
@@ -458,6 +463,7 @@ button.add-btn {
     opacity: 1;
     visibility: visible;
 }
+
 
 /*======================slid bar=============================*/
 .nav-buttons {
@@ -491,53 +497,91 @@ button.add-btn {
     border-radius: 5px;
     transform: translateY(-5px);
 }
-/*----------------------------------------------------*/
-/*----------------------------------------------------*/
-.welcome-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+
+
+/*=================Profile Page=============================*/
+/*.profile-screen {
+    padding: 30px;
   }
-#user-name{
-    color: rgb(255, 255, 255);
-}
   
-  .welcome-section img {
-    width: 50px;
-    height: 50px;
+  .profile-details {
+    text-align: center;
+  }
+  
+  .profile-details img {
+    width: 6rem;
     border-radius: 50%;
-    margin-right: 10px;
   }
   
-  .user-form {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+  .profile-details h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
   }
   
-  .user-form.active {
-    display: flex;
+  .profile-details p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+  
+  .edit-profile-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #39a6f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #2e8ac0;
+  }
+  
+  /*=================Calendar Page Page=============================*/
+  /*.calendar-screen {
+    padding: 30px;
+  }
+  
+  .calendar-details {
+    margin-top: 2rem;
+  }
+  
+  /* FullCalendar styles (add this to your main CSS or include FullCalendar CSS via CDN) */
+  /*#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .fc-toolbar h2 {
+    font-size: 1.5rem;
+    color: #2e2e2e;
+  }
+  
+  .fc-button {
+    background-color: #39a6f0;
+    border: none;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  .fc-button:hover {
+    background-color: #2e8ac0;
+  }
+  
+  .fc-daygrid-day-number {
+    color: #2e2e2e;
   }
   
 
-  /**/
-  .user-form-wrapper {
+  .hidden {
     display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
   }
-  
-  .user-form-wrapper.active {
-    display: flex;
+  .active {
+    display: block;
   }
+  */
+
+  /*profile Page*/
   

@@ -1,5 +1,9 @@
 let categories = [
   {
+    title: "Daily",
+    img: "24-7.png",
+  },
+  {
     title: "Personal",
     img: "boy.png",
   },
@@ -43,7 +47,7 @@ let tasks = [
   {
     id: 2,
     task: "Read a chapter of a book",
-    category: "Personal",
+    category: "Daily",
     completed: false,
   },
   {
@@ -91,7 +95,7 @@ let tasks = [
   {
     id: 10,
     task: "Write in a journal",
-    category: "Personal",
+    category: "Daily",
     completed: false,
   },
   {
@@ -140,7 +144,7 @@ let tasks = [
   {
     id: 18,
     task: "Meditate for 10 minutes",
-    category: "Personal",
+    category: "Daily",
     completed: false,
   },
   {
@@ -203,6 +207,11 @@ const getLocal = () => {
 const toggleScreen = () => {
   screenWrapper.classList.toggle("show-category");
 };
+
+const toggleMenu = () => {
+  screenWrapper.classList.toggle("show-category");
+};
+
 
 const updateTotals = () => {
   const categoryTasks = tasks.filter(
@@ -324,7 +333,6 @@ const renderTasks = () => {
                 </svg>
               </span>
               <p>${task.task}</p>
-              <span class="task-date">${task.date}</span>
         `;
       label.prepend(checkbox);
       div.prepend(label);
@@ -354,22 +362,17 @@ const addTask = (e) => {
   e.preventDefault();
   const task = taskInput.value;
   const category = categorySelect.value;
-  const date = taskDate.value;
 
   if (task === "") {
     alert("Please enter a task");
-  } else if (date === "") {
-    alert("Please select a date");
   } else {
     const newTask = {
       id: tasks.length + 1,
       task,
       category,
-      date,
       completed: false,
     };
     taskInput.value = "";
-    taskDate.value = "";
     tasks.push(newTask);
     saveLocal();
     toggleAddTaskForm();
@@ -395,8 +398,11 @@ const blackBackdrop = document.querySelector(".black-backdrop");
 const addBtn = document.querySelector(".add-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
 const totalTasks = document.getElementById("total-tasks");
-
-const taskDate = document.getElementById("task-date");
+//
+const profileBtn = document.querySelector('.profile-btn');
+const calendarBtn = document.querySelector('.calendar-btn');
+const profileScreen = document.querySelector('.profile-screen');
+const calendarScreen = document.querySelector('.calendar-screen');
 
 // Attach event listeners
 menuBtn.addEventListener("click", toggleScreen);
@@ -415,93 +421,26 @@ categories.forEach((category) => {
   option.textContent = category.title;
   categorySelect.appendChild(option);
 });
+ 
+//On Click
+(function() {
+  // Initialize variables for new screens
+  const profileBtn = document.querySelector('.profile-btn');
+  const calendarBtn = document.querySelector('.calendar-btn');
+  const profileScreen = document.querySelector('.profile-screen');
+  const calendarScreen = document.querySelector('.calendar-screen');
+  const mainScreen = document.querySelector('.main-screen'); // Assuming main screen
 
+  // Function to show a specific screen
+  const showScreen = (screen) => {
+    mainScreen.classList.add('hidden');
+    profileScreen.classList.add('hidden');
+    calendarScreen.classList.add('hidden');
 
-//use name
-document.addEventListener('DOMContentLoaded', () => {
-  const nameInput = document.getElementById('name-input');
-  const setNameBtn = document.getElementById('set-name-btn');
-  const userNameSpan = document.getElementById('user-name');
-
-  setNameBtn.addEventListener('click', () => {
-    const userName = nameInput.value.trim();
-    if (userName) {
-      userNameSpan.textContent = userName;
-    }
-  });
-});
-
-//
-document.addEventListener('DOMContentLoaded', () => {
-  const nameInput = document.getElementById('name-input');
-  const genderSelect = document.getElementById('gender-select');
-  const setNameBtn = document.getElementById('set-name-btn');
-  const userNameSpan = document.getElementById('user-name');
-  const userImage = document.getElementById('user-image');
-
-  setNameBtn.addEventListener('click', () => {
-    const userName = nameInput.value.trim();
-    const userGender = genderSelect.value;
-
-    if (userName) {
-      userNameSpan.textContent = userName;
-
-      if (userGender === 'male') {
-        userImage.src = 'images/boy.png';
-      } else if (userGender === 'female') {
-        userImage.src = 'images/girl.png';
-      }
-    }
-  });
-});
-
-
-///user name
-
-///user name
-document.addEventListener('DOMContentLoaded', () => {
-  const nameInput = document.getElementById('name-input');
-  const genderSelect = document.getElementById('gender-select');
-  const setNameBtn = document.getElementById('set-name-btn');
-  const userNameSpan = document.getElementById('user-name');
-  const userImage = document.getElementById('user-image');
-  const userForm = document.querySelector('.user-form');
-  const menuBtn = document.querySelector('.menu-btn');
-
-  // Retrieve user data from local storage
-  const getUserData = () => {
-    const userData = JSON.parse(localStorage.getItem('userData'));
-    if (userData) {
-      userNameSpan.textContent = userData.name;
-      userImage.src = userData.gender === 'male' ? 'images/boy.png' : userData.gender === 'female' ? 'images/girl.png' : 'images/default.png';
-    }
+    screen.classList.remove('hidden');
   };
 
-  // Save user data to local storage
-  const saveUserData = (name, gender) => {
-    const userData = { name, gender };
-    localStorage.setItem('userData', JSON.stringify(userData));
-  };
-
-  setNameBtn.addEventListener('click', () => {
-    const userName = nameInput.value.trim();
-    const userGender = genderSelect.value;
-
-    if (userName) {
-      userNameSpan.textContent = userName;
-      userImage.src = userGender === 'male' ? 'images/boy.png' : userGender === 'female' ? 'images/girl.png' : 'images/default.png';
-      saveUserData(userName, userGender);
-      userForm.classList.remove('active');
-    }
-  });
-
-  menuBtn.addEventListener('click', () => {
-    userForm.classList.toggle('active');
-  });
-
-  // Initial data load
-  getUserData();
-});
-
-// 
-
+  // Attach event listeners
+  profileBtn.addEventListener('click', () => showScreen(profileScreen));
+  calendarBtn.addEventListener('click', () => showScreen(calendarScreen));
+})();
