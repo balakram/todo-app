@@ -1,6 +1,6 @@
 let categories = [
   {
-    title: "Daily",
+    title: "Personal",
     img: "24-7.png",
   },
   {
@@ -47,7 +47,7 @@ let tasks = [
   {
     id: 2,
     task: "Read a chapter of a book",
-    category: "Daily",
+    category: "Personal",
     completed: false,
   },
   {
@@ -95,7 +95,7 @@ let tasks = [
   {
     id: 10,
     task: "Write in a journal",
-    category: "Daily",
+    category: "Personal",
     completed: false,
   },
   {
@@ -144,7 +144,7 @@ let tasks = [
   {
     id: 18,
     task: "Meditate for 10 minutes",
-    category: "Daily",
+    category: "Personal",
     completed: false,
   },
   {
