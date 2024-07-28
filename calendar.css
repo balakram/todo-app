@@ -41,7 +41,7 @@ body {
 
 .screen-backdrop {
   width: 135%;
-  height: 10rem;
+  height: 12rem;
   position: absolute;
   top: 0;
   left: 50%;
@@ -54,7 +54,7 @@ body {
 
 
 .top {
-  margin-top: 70px;
+  margin-top: 50px;
     flex: -5;
 }
 .bottom {
@@ -75,7 +75,7 @@ body {
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 
