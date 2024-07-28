@@ -67,7 +67,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
   overflow: hidden; /* Ensure no overflow outside rounded corners */
   margin: 5px 10px; /* Top and bottom margin 25px, left and right margin 40px */
-  background-image: url('images/design.jpg'); /* Set your background image */
+  /*background-image: url('images/design.jpg'); /* Set your background image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
