@@ -53,7 +53,11 @@ body {
 }
 
 
-.top, .bottom {
+.top {
+  margin-top: 70px;
+    flex: -5;
+}
+.bottom {
   margin-top: 10px;
     flex: -5;
 }
@@ -388,6 +392,7 @@ body {
 
 /*back Button*/
 .back-btn {
+  margin-top: 20px;
   position: absolute;
   top: 10px;
   left: 20px;
