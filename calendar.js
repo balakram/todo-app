@@ -269,7 +269,7 @@ function updateEvents(date) {
 }
 
 //function to add event
-addEventBtn.addEventListener("click", () => {
+/*addEventBtn.addEventListener("click", () => {
   addEventWrapper.classList.toggle("active");
 });
 
@@ -286,7 +286,7 @@ document.addEventListener("click", (e) => {
 //allow 50 chars in eventtitle
 addEventTitle.addEventListener("input", (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 60);
-});
+});*/
 
 
 
@@ -312,7 +312,7 @@ addEventTo.addEventListener("input", (e) => {
 });
 
 //function to add event to eventsArr
-addEventSubmit.addEventListener("click", () => {
+/*addEventSubmit.addEventListener("click", () => {
   const eventTitle = addEventTitle.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
@@ -398,7 +398,7 @@ addEventSubmit.addEventListener("click", () => {
   if (!activeDayEl.classList.contains("event")) {
     activeDayEl.classList.add("event");
   }
-});
+});*/
 
 //function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
