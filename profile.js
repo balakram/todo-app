@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function loadProfile() {
       const profileData = JSON.parse(localStorage.getItem('profileData'));
       if (profileData) {
-          profileName.textContent = `${profileData.name || 'Not provided'}`;
+          profileName.textContent = `${profileData.name || 'User'}`;
           profileGender.textContent = ` ${profileData.gender || 'Not provided'}`;
           if (profileData.image) {
               profileImage.src = profileData.image;
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       } else {
           // Handle case when no profile data is found
-          profileName.textContent = 'Not provided';
+          profileName.textContent = 'User';
           profileGender.textContent = ' Not provided';
           profileImage.src = '';
           profileImage.style.display = 'none'; // Hide image if no data

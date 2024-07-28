@@ -346,7 +346,7 @@ body {
     justify-content: center;
     background-color: #39a6f0;
     transition: all 0.3s;
-    /*margin-bottom: 35px;*/
+    margin-bottom: 35px;
 }
 
 .add-task-btn:hover {
