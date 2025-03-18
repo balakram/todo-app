@@ -72,6 +72,7 @@ body {
 .wrapper .menu-screen {
     transform: translateX(-100%);
 }
+
 .wrapper.show-category .screen-backdrop {
     transform: translate(-50%, -60%)
 }
@@ -371,7 +372,7 @@ body {
     width: 100%;
     padding: 20px 30px;
     transition: all 0.3s;
-    
+
 }
 
 .add-task.active {
@@ -475,21 +476,21 @@ button.add-btn {
     justify-content: space-around;
     background-color: #084c9f7e;
     padding: 10px 0;
-  }
-  
-  .nav-btn {
+}
+
+.nav-btn {
     background: none;
     border: none;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s;
-    
-  }
-  
-  .nav-btn:hover {
+
+}
+
+.nav-btn:hover {
     transform: scale(1.1);
-  }
+}
 
 .nav-btn:hover {
     background: #39a7f000;
@@ -540,7 +541,7 @@ button.add-btn {
   }
   
   /*=================Calendar Page Page=============================*/
-  /*.calendar-screen {
+/*.calendar-screen {
     padding: 30px;
   }
   
@@ -549,7 +550,7 @@ button.add-btn {
   }
   
   /* FullCalendar styles (add this to your main CSS or include FullCalendar CSS via CDN) */
-  /*#calendar {
+/*#calendar {
     max-width: 100%;
     margin: 0 auto;
   }
@@ -583,5 +584,4 @@ button.add-btn {
   }
   */
 
-  /*profile Page*/
-  
+/*profile Page*/
